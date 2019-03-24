@@ -36,9 +36,10 @@ if($num>0){
  
         $product_item=array(
             "id" => $id,
-            "username" => $username,
+            "user_name" => $user_name,
             "password" => $password,
-            "email" => $email
+            "e_mail" => $e_mail,
+			"creation_date" => $creation_date,
         );
  
         array_push($products_arr["users"], $product_item);

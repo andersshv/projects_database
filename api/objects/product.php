@@ -23,7 +23,7 @@ class Product{
 	function read(){
 	 
 		// select all query
-		$query = "SELECT * FROM `User` WHERE 1";
+		$query = "SELECT * FROM `user` WHERE 1";
 	 
 		// prepare query statement
 		$stmt = $this->conn->prepare($query);
