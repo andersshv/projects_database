@@ -1,0 +1,41 @@
+Database med al information om projekter.
+En get og post api, hvor man kan tilføje projekter, og aflæse eksisterende projekter.
+Et projekt skal enten være kørende eller arkiveret.
+Man kan så bede om at få vist alle kørende projekter eller alle arkiverede.
+Der skal så være et CLI der kan udskrive i consollen.
+En hjemmeside implementation - frontend.
+Og en app.
+Så man kan tilgå data uanset hvor man står.
+Databasen skal have en tabel der hedder: Projekt, som ser sådan ud
+<User>
+ID: Integer
+Brugernavn: String
+Password: String
+Email: String
+Projekter: [<Projekt>]
+
+<Projekt>
+ID: Integer
+Beskrivelse: String
+Oprettelsesdato: String
+Gøremål[<Gøremål>]
+Afsluttet: Boolean
+
+<Gøremål>
+ID: Integer
+Beskrivelse: String
+Udført: Boolean
+
+****************** PLAN ****************
+
+Opret AWS server, med Ubuntu 16.4
+Opret MySQL database - Indsæt test data - og test den via cmd line
+Opret Apache server på serveren
+Lav et RESTApi i PHP - der kan poste og gette fra databasen
+Prøv det af fra en browser - som bare viser rådata/jsondata
+Prøv det af med curl
+Lav en CLI i Java der henter data og viser data i terminalen
+Lav en frontend applikation i React der viser data i browseren på en flot måde.
+Lav login funktionalitet til browseren - login skal foregå på serveren
+Lav app hvor man kan tilgå data
+ 
