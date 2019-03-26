@@ -48,5 +48,38 @@ class Project{
 	 
 		return $stmt;
 	}
+	
+	// create project
+	function create(){
+	 
+		// query to insert record
+		$query = 
+			"INSERT INTO " . $this->table_name . 
+			" SET id=:id, user_id=:user_id, project_name=:project_name, creation_date=:creation_date, archived=:archived";
+	 
+		// prepare query
+		$stmt = $this->conn->prepare($query);
+	 
+		// sanitize
+		$this->id=htmlspecialchars(strip_tags($this->id));
+		$this->user_id=htmlspecialchars(strip_tags($this->user_id));
+		$this->project_name=htmlspecialchars(strip_tags($this->project_name));
+		$this->creation_date=htmlspecialchars(strip_tags($this->creation_date));
+		$this->archived=htmlspecialchars(strip_tags($this->archived));
+	 
+		// bind values
+		$stmt->bindParam(":id", $this->id);
+		$stmt->bindParam(":user_id", $this->user_id);
+		$stmt->bindParam(":project_name", $this->project_name);
+		$stmt->bindParam(":creation_date", $this->creation_date);
+		$stmt->bindParam(":archived", $this->archived);
+	 
+		// execute query
+		if($stmt->execute()){
+			return true;
+		}
+	 
+		return false;		 
+	}
 }
 ?>

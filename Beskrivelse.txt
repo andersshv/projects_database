@@ -1,3 +1,4 @@
+WebBaseretProjekterDatabase
 Database med al information om projekter.
 En get og post api, hvor man kan tilføje projekter, og aflæse eksisterende projekter.
 Et projekt skal enten være kørende eller arkiveret.

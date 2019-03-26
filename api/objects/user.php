@@ -8,7 +8,6 @@ class User{
     // object properties
     public $id;
     public $user_name;
-    public $e_mail;
  
     // constructor with $db as database connection
     public function __construct($db){
@@ -30,6 +29,31 @@ class User{
 		$stmt->execute();
 	 
 		return $stmt;
+	}
+	
+	// create user
+	function create(){
+	 
+		// query to insert record
+		$query = "INSERT INTO " . $this->table_name . " SET id=:id, user_name=:user_name";
+	 
+		// prepare query
+		$stmt = $this->conn->prepare($query);
+	 
+		// sanitize
+		$this->id=htmlspecialchars(strip_tags($this->id));
+		$this->user_name=htmlspecialchars(strip_tags($this->user_name));
+	 
+		// bind values
+		$stmt->bindParam(":id", $this->id);
+		$stmt->bindParam(":user_name", $this->user_name);
+	 
+		// execute query
+		if($stmt->execute()){
+			return true;
+		}
+	 
+		return false;		 
 	}
 }
 ?>
