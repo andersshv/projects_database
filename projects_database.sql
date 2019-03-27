@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 27, 2019 at 02:22 PM
+-- Generation Time: Mar 27, 2019 at 03:36 PM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.3.2
 
@@ -21,30 +21,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `projects_database`
 --
-
--- --------------------------------------------------------
-
---
--- Table structure for table `action`
---
-
-CREATE TABLE `action` (
-  `id` int(11) NOT NULL,
-  `project_id` int(11) NOT NULL,
-  `action_date` date NOT NULL,
-  `action_text` text NOT NULL,
-  `done` tinyint(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `action`
---
-
-INSERT INTO `action` (`id`, `project_id`, `action_date`, `action_text`, `done`) VALUES
-(1, 1, '0000-00-00', 'fffff', 0),
-(2, 1, '0000-00-00', 'fffrrff', 0),
-(3, 2, '0000-00-00', 'fffff', 0),
-(678, 333, '0000-00-00', '333', 1);
 
 -- --------------------------------------------------------
 
