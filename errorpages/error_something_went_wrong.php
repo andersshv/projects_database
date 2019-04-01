@@ -7,11 +7,11 @@
 	<div>
 		<h1>Error</h1>
 			<p>
-				Two users have the same username. This should never happen. Please contact support!
-			</p>     
-		<a href=".">
+				Something went wrong, please try again.
+			</p>
+		<a href="..">
 			<button>
-				Home
+				Log in
 			</button>
 		</a>
 	</div>

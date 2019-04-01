@@ -7,11 +7,11 @@
 	<div>
 		<h1>Error</h1>
 			<p>
-				Something went wrong, please try again.
-			</p>     
-		<a href=".">
+				You are not logged in!
+			</p>
+		<a href="..">
 			<button>
-				Home
+				Log in
 			</button>
 		</a>
 	</div>

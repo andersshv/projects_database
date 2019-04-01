@@ -1,7 +1,3 @@
-<?php 
-require 'db.php';
-session_start();
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,8 +6,8 @@ session_start();
 	<link rel="icon" href="./favicon/favicon.ico">
 	<title>projects_database</title>
 </head>
-<?php 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') 
+<?php
+if ($_SERVER['REQUEST_METHOD'] == 'POST')
 {
 	require 'login.php';
 }
@@ -35,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 			<input type="text" placeholder="Enter Username" name="user_name" required>
 		<br/>
 		<br/>
-		
+
 		<label for="password"><b>Password: </b></label>
 			<input type="password" placeholder="Enter Password" name="password" required>
 		<br/>
@@ -45,7 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 		  <button type="submit" class="signupbtn">Log in</button>
 		</div>
 	  </div>
-	</form> 
+	</form>
 
 </body>
-</html> 
+</html>

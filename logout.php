@@ -3,7 +3,7 @@
 session_start();
 $user_name = $_SESSION['user_name'];
 session_unset();
-session_destroy(); 
+session_destroy();
 ?>
 <!DOCTYPE html>
 <html>
@@ -11,11 +11,10 @@ session_destroy();
   <meta charset="UTF-8">
   <title>projects_database</title>
 </head>
-
-<body>
-    <div class="form">             
-          <h1><?php echo 'Goodbye ' . $user_name ?></h1>          
-          <a href="."><button>Log in</button></a>
+<body style="background-color: chocolate">
+    <div class="form">
+        <h1 style="width: 100%; background-color: antiquewhite"><?php echo 'Goodbye ' . $user_name ?></h1>
+        <a href="."><button>Log in</button></a>
     </div>
 </body>
 </html>
